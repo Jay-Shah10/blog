@@ -9,4 +9,5 @@ class IsAuthorOrReadOnly(permissions.BasePermission):
         
 
         # Write permission are only allowed to the author of a post.
-        return obj.auther == request.user
+        return obj.author == request.user
+
