@@ -40,6 +40,9 @@ INSTALLED_APPS = [
 
     # local app. 
     'posts.apps.PostsConfig',
+
+    # Third Party apps.
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
