@@ -43,13 +43,20 @@ INSTALLED_APPS = [
 
     # Third Party apps.
     'rest_framework',
+    'rest_framework.authtoken',
+    'rest_auth'
 ]
 
 # new
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated', # project level permission.
-    ]
+    ], 
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        # 'rest_framework.authentication.BasicAuthentication' # this is used for baisc auth.
+        'rest_framework.authentication.TokenAuthentication', # token based authentication.
+    ],
 }
 
 MIDDLEWARE = [
